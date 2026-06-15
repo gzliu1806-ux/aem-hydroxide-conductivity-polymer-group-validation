@@ -1,0 +1,32 @@
+{
+  "scope": {
+    "public_runtime_report_only": true,
+    "minimal_public_example_dependencies": [
+      "numpy",
+      "pandas",
+      "scikit-learn"
+    ],
+    "broader_manuscript_reference_versions_not_required_for_toy_run": true,
+    "exact_manuscript_metrics_use_non_public_observation_table": true
+  },
+  "python": {
+    "public_smoke_test_runtime": "Python 3.13.5 was used for the final local smoke test; the bounded requirements are intended for compatible modern Python environments."
+  },
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.5.1",
+    "matplotlib": "3.9.2",
+    "rdkit": "2024.3.5",
+    "joblib": "1.4.2",
+    "catboost": "1.2.7",
+    "shap": "0.46.0",
+    "nbformat": "5.10.4",
+    "openpyxl": "3.1.5"
+  },
+  "boundary": {
+    "requirements_txt": "Only numpy, pandas, and scikit-learn are required for the runnable public toy example.",
+    "manuscript_metrics": "Exact CatBoost manuscript metrics require the non-public observation table."
+  }
+}

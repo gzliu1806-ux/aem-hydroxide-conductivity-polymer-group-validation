@@ -1,0 +1,352 @@
+{
+  "scope": {
+    "public_figure_source_map_only": true,
+    "exact_plotting_data_use_non_public_observation_table": true,
+    "no_record_level_response_data_or_source_records": true,
+    "toy_script_does_not_regenerate_figures": true
+  },
+  "summary": {
+    "main_figure_count": 7,
+    "supplementary_figure_count": 8,
+    "purpose": "Maps each figure to public artwork, journal upload artifacts, manuscript/SI locations, Supplementary Data tables, public JSON files, and release-boundary notes."
+  },
+  "figures": [
+    {
+      "figure_id": "Fig. 1",
+      "title": "Study design for polymer-group validation",
+      "artwork_files": [
+        "artwork/main_figures/Fig1_Study_design_validation_workflow.pdf",
+        "artwork/main_figures/Fig1_Study_design_validation_workflow.png"
+      ],
+      "journal_upload_artifacts": [
+        "main_figures/Fig1_Study_design_validation_workflow.pdf"
+      ],
+      "manuscript_location": "Main manuscript Fig. 1 caption; Results 3.1",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S1",
+        "Supplementary Data 1 Table S4",
+        "Supporting Information Fig. S1"
+      ],
+      "code_or_map_routes": [
+        "claim_to_artifact_map_public.json: polymer_group_validation",
+        "reader_question_map_public.json: polymer_group_leakage",
+        "public_pipeline_template.py output: split_check.grouped_cv"
+      ],
+      "boundary": "Dataset summaries are public aggregates; exact observation-level plotting data use restricted literature-derived records."
+    },
+    {
+      "figure_id": "Fig. 2",
+      "title": "Dataset structure and split motivation",
+      "artwork_files": [
+        "artwork/main_figures/Fig2_Dataset_structure_leakage_motivation.pdf",
+        "artwork/main_figures/Fig2_Dataset_structure_leakage_motivation.png"
+      ],
+      "journal_upload_artifacts": [
+        "main_figures/Fig2_Dataset_structure_leakage_motivation.pdf"
+      ],
+      "manuscript_location": "Main manuscript Fig. 2 caption; Results 3.1",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S1",
+        "Supplementary Data 1 Table S4",
+        "Supplementary Data 1 Table S11",
+        "Supporting Information Fig. S1"
+      ],
+      "code_or_map_routes": [
+        "claim_to_artifact_map_public.json: polymer_group_validation",
+        "reader_question_map_public.json: polymer_group_leakage",
+        "public_pipeline_template.py output: split_check.grouped_cv"
+      ],
+      "boundary": "Dataset and split summaries are public aggregates; exact row-level plotting data use restricted literature-derived records."
+    },
+    {
+      "figure_id": "Fig. 3",
+      "title": "Polymer-group benchmark and simplified descriptor ladder",
+      "artwork_files": [
+        "artwork/main_figures/Fig3_Polymer_group_benchmark.pdf",
+        "artwork/main_figures/Fig3_Polymer_group_benchmark.png"
+      ],
+      "journal_upload_artifacts": [
+        "main_figures/Fig3_Polymer_group_benchmark.pdf"
+      ],
+      "manuscript_location": "Main manuscript Fig. 3 caption; Results 3.2",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S6",
+        "manuscript_metric_index_public.json: polymer_group_full_model",
+        "Supporting Information Fig. S5"
+      ],
+      "code_or_map_routes": [
+        "claim_to_artifact_map_public.json: generic_descriptors_supply_structure_signal",
+        "reader_question_map_public.json: exact_metric_regeneration"
+      ],
+      "boundary": "Benchmark values are public summary metrics; exact CatBoost predictions and row-level plotting data use restricted records."
+    },
+    {
+      "figure_id": "Fig. 4",
+      "title": "AEM descriptor response rationale",
+      "artwork_files": [
+        "artwork/main_figures/Fig4_AEM_descriptor_response_rationale.pdf",
+        "artwork/main_figures/Fig4_AEM_descriptor_response_rationale.png"
+      ],
+      "journal_upload_artifacts": [
+        "main_figures/Fig4_AEM_descriptor_response_rationale.pdf"
+      ],
+      "manuscript_location": "Main manuscript Fig. 4 caption; Results 3.3",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S2",
+        "Supplementary Data 1 Table S14",
+        "Supporting Information Fig. S7"
+      ],
+      "code_or_map_routes": [
+        "claim_to_artifact_map_public.json: aem_descriptors_are_interpretive",
+        "reader_question_map_public.json: response_profiles_not_causal",
+        "public_schema_dictionary.csv"
+      ],
+      "boundary": "AEM response profiles are fitted summaries over sampled descriptor ranges; they are not direct morphology, free-volume, hydrated-channel, or transport-pathway measurements."
+    },
+    {
+      "figure_id": "Fig. 5",
+      "title": "Support-distance boundary for polymer-held-out estimates",
+      "artwork_files": [
+        "artwork/main_figures/Fig5_Support_distance_boundary.pdf",
+        "artwork/main_figures/Fig5_Support_distance_boundary.png"
+      ],
+      "journal_upload_artifacts": [
+        "main_figures/Fig5_Support_distance_boundary.pdf"
+      ],
+      "manuscript_location": "Main manuscript Fig. 5 caption; Results 3.4",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S6",
+        "Supplementary Data 1 Table S13",
+        "Supporting Information Fig. S6"
+      ],
+      "code_or_map_routes": [
+        "claim_to_artifact_map_public.json: support_distance_flags_risk",
+        "reader_question_map_public.json: support_distance_and_source_context"
+      ],
+      "boundary": "Support-distance summaries are public aggregate diagnostics; row-level neighbor distances and predictions use restricted records."
+    },
+    {
+      "figure_id": "Fig. 6",
+      "title": "Raw source-held-out heterogeneity",
+      "artwork_files": [
+        "artwork/main_figures/Fig6_Source_held_out_heterogeneity.pdf",
+        "artwork/main_figures/Fig6_Source_held_out_heterogeneity.png"
+      ],
+      "journal_upload_artifacts": [
+        "main_figures/Fig6_Source_held_out_heterogeneity.pdf"
+      ],
+      "manuscript_location": "Main manuscript Fig. 6 caption; Results 3.5",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S6",
+        "Supplementary Data 1 Table S9",
+        "Supporting Information Fig. S8"
+      ],
+      "code_or_map_routes": [
+        "claim_to_artifact_map_public.json: source_held_out_offsets",
+        "reader_question_map_public.json: support_distance_and_source_context",
+        "manuscript_metric_index_public.json: source_held_out_offset_check"
+      ],
+      "boundary": "Source-level details and row-level verification materials follow the manuscript Data availability statement."
+    },
+    {
+      "figure_id": "Fig. 7",
+      "title": "Model and grouped-split AEM descriptor checks",
+      "artwork_files": [
+        "artwork/main_figures/Fig7_Model_validation_bounds.pdf",
+        "artwork/main_figures/Fig7_Model_validation_bounds.png"
+      ],
+      "journal_upload_artifacts": [
+        "main_figures/Fig7_Model_validation_bounds.pdf"
+      ],
+      "manuscript_location": "Main manuscript Fig. 7 caption; Results 3.6",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S5",
+        "Supplementary Data 1 Table S6"
+      ],
+      "code_or_map_routes": [
+        "claim_to_artifact_map_public.json: aem_descriptors_are_interpretive",
+        "reader_question_map_public.json: exact_metric_regeneration",
+        "manuscript_metric_index_public.json: polymer_group_full_model"
+      ],
+      "boundary": "Model and validation-bound values are public summary metrics; exact split assignments, trained models, and row-level predictions are not public package contents."
+    },
+    {
+      "figure_id": "Fig. S1",
+      "title": "Data curation and target definition",
+      "artwork_files": [
+        "artwork/supplementary_figures/FigS1_Data_curation_target.pdf",
+        "artwork/supplementary_figures/FigS1_Data_curation_target.png"
+      ],
+      "journal_upload_artifacts": [
+        "Supporting_Information_v8_2.pdf"
+      ],
+      "manuscript_location": "Supporting Information Fig. S1",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S1",
+        "Supplementary Data 1 Table S12",
+        "public_schema_dictionary.csv"
+      ],
+      "code_or_map_routes": [
+        "claim_to_artifact_map_public.json: reported_hydroxide_conductivity_target",
+        "reader_question_map_public.json: dataset_not_public"
+      ],
+      "boundary": "Curation summaries are public aggregates; observation-level extraction rows and row-level plotting data use the non-public observation table."
+    },
+    {
+      "figure_id": "Fig. S2",
+      "title": "Descriptor taxonomy and interpretation boundaries",
+      "artwork_files": [
+        "artwork/supplementary_figures/FigS2_Descriptor_taxonomy.pdf",
+        "artwork/supplementary_figures/FigS2_Descriptor_taxonomy.png"
+      ],
+      "journal_upload_artifacts": [
+        "Supporting_Information_v8_2.pdf"
+      ],
+      "manuscript_location": "Supporting Information Fig. S2",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S2",
+        "public_schema_dictionary.csv",
+        "Methods 2.3"
+      ],
+      "code_or_map_routes": [
+        "claim_to_artifact_map_public.json: aem_descriptors_are_interpretive",
+        "reader_question_map_public.json: response_profiles_not_causal"
+      ],
+      "boundary": "Descriptor definitions and roles are public; row-level descriptor tables and plotting data are handled through the manuscript data-access route."
+    },
+    {
+      "figure_id": "Fig. S3",
+      "title": "Covariate distributions and field availability",
+      "artwork_files": [
+        "artwork/supplementary_figures/FigS3_Covariates_availability.pdf",
+        "artwork/supplementary_figures/FigS3_Covariates_availability.png"
+      ],
+      "journal_upload_artifacts": [
+        "Supporting_Information_v8_2.pdf"
+      ],
+      "manuscript_location": "Supporting Information Fig. S3",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S3",
+        "Supplementary Data 1 Table S12",
+        "Methods 2.1"
+      ],
+      "code_or_map_routes": [
+        "public_schema_dictionary.csv",
+        "reader_question_map_public.json: dataset_not_public"
+      ],
+      "boundary": "Field-availability summaries are aggregate; exact missingness patterns and row-level plotting data use the non-public observation table."
+    },
+    {
+      "figure_id": "Fig. S4",
+      "title": "Model-class benchmark",
+      "artwork_files": [
+        "artwork/supplementary_figures/FigS4_Model_class_benchmark.pdf",
+        "artwork/supplementary_figures/FigS4_Model_class_benchmark.png"
+      ],
+      "journal_upload_artifacts": [
+        "Supporting_Information_v8_2.pdf"
+      ],
+      "manuscript_location": "Supporting Information Fig. S4",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S5",
+        "Supplementary Data 1 Table S6",
+        "Methods 2.4"
+      ],
+      "code_or_map_routes": [
+        "manuscript_metric_index_public.json: polymer_group_full_model",
+        "reader_question_map_public.json: exact_metric_regeneration"
+      ],
+      "boundary": "Model-class benchmark values are reported summary metrics; trained models, full prediction files, and row-level plotting data are not public package contents."
+    },
+    {
+      "figure_id": "Fig. S5",
+      "title": "AEM descriptor increment sensitivity",
+      "artwork_files": [
+        "artwork/supplementary_figures/FigS5_AEM_descriptor_increment.pdf",
+        "artwork/supplementary_figures/FigS5_AEM_descriptor_increment.png"
+      ],
+      "journal_upload_artifacts": [
+        "Supporting_Information_v8_2.pdf"
+      ],
+      "manuscript_location": "Supporting Information Fig. S5",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S6",
+        "Supplementary Data 1 Table S7",
+        "Supplementary Data 1 Table S8"
+      ],
+      "code_or_map_routes": [
+        "claim_to_artifact_map_public.json: generic_descriptors_supply_structure_signal",
+        "reader_question_map_public.json: small_aem_descriptor_increment",
+        "public_pipeline_template.py output: feature_family_check"
+      ],
+      "boundary": "Ablation patterns are public aggregate summaries; exact fold-level values and row-level plotting data use the non-public observation table."
+    },
+    {
+      "figure_id": "Fig. S6",
+      "title": "Applicability-domain analysis",
+      "artwork_files": [
+        "artwork/supplementary_figures/FigS6_Applicability_domain_analysis.pdf",
+        "artwork/supplementary_figures/FigS6_Applicability_domain_analysis.png"
+      ],
+      "journal_upload_artifacts": [
+        "Supporting_Information_v8_2.pdf"
+      ],
+      "manuscript_location": "Supporting Information Fig. S6",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S6",
+        "Main manuscript Fig. 2C",
+        "Results 3.2"
+      ],
+      "code_or_map_routes": [
+        "claim_to_artifact_map_public.json: support_distance_flags_risk",
+        "reader_question_map_public.json: support_distance_and_source_context"
+      ],
+      "boundary": "Support-distance trends are aggregate risk indicators; selected-feature support distances and row-level plotting data use the non-public observation table."
+    },
+    {
+      "figure_id": "Fig. S7",
+      "title": "AEM response profiles",
+      "artwork_files": [
+        "artwork/supplementary_figures/FigS7_AEM_response_profiles.pdf",
+        "artwork/supplementary_figures/FigS7_AEM_response_profiles.png"
+      ],
+      "journal_upload_artifacts": [
+        "Supporting_Information_v8_2.pdf"
+      ],
+      "manuscript_location": "Supporting Information Fig. S7",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S2",
+        "Supplementary Data 1 Table S6",
+        "Main manuscript Fig. 3"
+      ],
+      "code_or_map_routes": [
+        "claim_to_artifact_map_public.json: aem_descriptors_are_interpretive",
+        "reader_question_map_public.json: response_profiles_not_causal"
+      ],
+      "boundary": "Response curves are model summaries, not direct measurements; row-level plotting data use the non-public observation table."
+    },
+    {
+      "figure_id": "Fig. S8",
+      "title": "Source-held-out residual analysis",
+      "artwork_files": [
+        "artwork/supplementary_figures/FigS8_Source_held_out_residual_analysis.pdf",
+        "artwork/supplementary_figures/FigS8_Source_held_out_residual_analysis.png"
+      ],
+      "journal_upload_artifacts": [
+        "Supporting_Information_v8_2.pdf"
+      ],
+      "manuscript_location": "Supporting Information Fig. S8",
+      "primary_public_sources": [
+        "Supplementary Data 1 Table S6",
+        "Supplementary Data 1 Table S9",
+        "Main manuscript Fig. 4"
+      ],
+      "code_or_map_routes": [
+        "claim_to_artifact_map_public.json: source_held_out_offsets",
+        "reader_question_map_public.json: support_distance_and_source_context",
+        "manuscript_metric_index_public.json: source_held_out_offset_check"
+      ],
+      "boundary": "Residual-offset summaries are aggregate source-held-out checks; source-derived curation materials and row-level plotting data use the non-public observation table."
+    }
+  ]
+}
