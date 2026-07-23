@@ -2,111 +2,98 @@
   "scope": {
     "public_claim_crosswalk_only": true,
     "toy_script_does_not_generate_reported_metrics": true,
-    "exact_metric_regeneration_uses_non_public_observation_table": true,
+    "exact_metric_regeneration_uses_observation_level_verification_data": true,
     "no_record_level_targets_or_source_records": true
   },
   "claims": [
     {
       "claim_id": "reported_hydroxide_conductivity_target",
-      "claim": "The modeling target is log10(reported AEM hydroxide conductivity / mS cm⁻¹), treated as a condition-specific reported membrane property and not as a standardized intrinsic transport constant.",
-      "manuscript_location": "Abstract; Methods 2.1; Data availability",
+      "claim": "The target is log10(reported AEM hydroxide conductivity / mS cm\u207b\u00b9), treated as a condition-specific reported property.",
+      "manuscript_location": "Abstract; opening methods paragraph; Data availability",
       "public_artifacts_to_inspect": [
-        "Supplementary Data 1 Table S1",
-        "Supplementary Data 1 Table S12",
-        "Supplementary Code 1 README.md",
+        "Supplementary Data 1 Tables S1 and S12",
+        "README.md",
         "example_data/schema_example.csv"
       ],
-      "code_example_check": "validate_schema checks a positive reported_hydroxide_conductivity_ms_cm target and reports target=log10(reported_hydroxide_conductivity_ms_cm).",
-      "boundary": "The public example uses synthetic data and does not encode membrane conditioning, OH-exchange pretreatment, post-exchange handling before measurement, hydration or swelling state, or measurement-protocol differences."
+      "boundary": "The synthetic example demonstrates field roles but not literature-record values."
     },
     {
       "claim_id": "polymer_group_validation",
-      "claim": "Polymer identity, not conductivity row, is the primary validation unit.",
-      "manuscript_location": "Results 3.1-3.2; Fig. 1; Supplementary Information Table S4",
+      "claim": "Polymer identity is the primary validation unit for repeated literature observations.",
+      "manuscript_location": "Main text; Fig. 1; Table S4",
       "public_artifacts_to_inspect": [
         "src/public_pipeline_template.py",
         "example_data/schema_example.csv",
         "Supplementary Data 1 Table S4"
       ],
-      "code_example_check": "The toy run reports group_leakage.max_overlap=0 under GroupKFold.",
-      "boundary": "The toy run checks the public split path only; locked CatBoost metrics use the non-public observation table."
+      "boundary": "The synthetic grouped split checks the code path; manuscript metrics use the full verification table."
     },
     {
       "claim_id": "rowwise_control_is_optimistic",
-      "claim": "Row-wise random splitting is an optimistic leakage-prone control rather than the main performance estimate.",
-      "manuscript_location": "Abstract; Supporting Information Table S11; Supplementary Data 1 Table S11",
+      "claim": "Random row-wise splitting is an optimistic control rather than the primary performance estimate.",
+      "manuscript_location": "Abstract; Fig. 1; Table S11",
       "public_artifacts_to_inspect": [
         "src/public_pipeline_template.py",
         "manuscript_metric_index_public.json",
         "Supplementary Data 1 Table S11"
       ],
-      "code_example_check": "The toy script implements rowwise_control as a separate KFold path and reports it separately from grouped_cv.",
-      "boundary": "Toy row-wise numbers have no manuscript meaning; Table S11 contains the reported aggregate row-wise control values."
+      "boundary": "Toy row-wise values are example outputs only."
     },
     {
       "claim_id": "generic_descriptors_supply_structure_signal",
-      "claim": "Generic molecular descriptors provide the main structure-derived descriptor gain.",
-      "manuscript_location": "Results 3.2; Fig. 3; Supplementary Data 1 Tables S5-S6",
+      "claim": "Generic molecular descriptors provide the larger structure-derived gain over reported membrane/test covariates.",
+      "manuscript_location": "Main text; Fig. 2; Tables S6 and S8",
       "public_artifacts_to_inspect": [
-        "src/public_pipeline_template.py",
         "manuscript_metric_index_public.json",
-        "Supplementary Data 1 Tables S5-S6",
-        "figure_source_map_public.json: Fig. 3 and Fig. 7"
+        "Supplementary Data 1 Tables S6 and S8",
+        "figure_source_map_public.json: Fig. 2"
       ],
-      "code_example_check": "The toy script evaluates nested BASE, BASE_GENERIC, and BASE_GENERIC_AEM feature sets.",
-      "boundary": "The toy feature-family ordering is illustrative; the reported descriptor-family conclusions are in Table S6."
+      "boundary": "The public toy feature-family loop is illustrative; reported values are indexed separately."
     },
     {
       "claim_id": "aem_descriptors_are_interpretive",
-      "claim": "AEM descriptors add a small repeatable increment and translate fitted-model behavior into follow-up membrane measurements.",
-      "manuscript_location": "Results 3.3 and 3.6; Fig. 4; Fig. 7; Fig. S7; Supplementary Data 1 Tables S6-S8 and S14",
+      "claim": "AEM descriptors add a small repeated-holdout increment and provide fitted response axes for follow-up measurement.",
+      "manuscript_location": "Main text; Figs. 2 and 3; Fig. S6; Tables S6\u2013S8 and S14",
       "public_artifacts_to_inspect": [
-        "manuscript_metric_index_public.json",
-        "Supplementary Data 1 Tables S6-S8 and S14",
-        "Supporting Information Table S2",
-        "figure_source_map_public.json: Fig. 4 and Fig. S7"
+        "summary_data/aem_response_profile_coordinates_public.csv",
+        "Supplementary Data 1 Tables S6\u2013S8 and S14",
+        "figure_source_map_public.json: Fig. 3 and Fig. S6"
       ],
-      "code_example_check": "The toy script includes AEM descriptor columns only as a public feature-family path.",
-      "boundary": "These fields are computed descriptors, not direct measurements of morphology, free volume, or ion pathways."
+      "boundary": "Response profiles are fitted summaries, not direct morphology, free-volume, or transport-pathway measurements."
     },
     {
       "claim_id": "support_distance_flags_risk",
-      "claim": "Predictions farther from training support carry higher risk as reported-conductivity estimates.",
-      "manuscript_location": "Results 3.4; Fig. 5; Fig. S6; Supplementary Data 1 Tables S6 and S13",
+      "claim": "Mean held-out error increases with distance from training support.",
+      "manuscript_location": "Main text; Fig. 5A; Fig. S7; Table S13",
       "public_artifacts_to_inspect": [
-        "Supplementary Data 1 Tables S6 and S13",
-        "Supporting Information Fig. S6",
-        "figure_source_map_public.json: Fig. 5",
-        "Data availability statement"
+        "Supplementary Data 1 Table S13",
+        "figure_source_map_public.json: Fig. 5 and Fig. S7"
       ],
-      "code_example_check": "The public example does not recompute manuscript support-distance bins because the selected-feature support space depends on the non-public observation table.",
-      "boundary": "Support-distance trends are aggregate risk indicators, not deterministic error bounds for individual new membranes."
+      "boundary": "The trend is an aggregate risk indicator, not a universal cutoff."
     },
     {
       "claim_id": "source_held_out_offsets",
-      "claim": "Source-held-out validation shows source-level offsets, and post hoc calibration is an offset-size analysis rather than deployable performance.",
-      "manuscript_location": "Results 3.5; Fig. 6; Fig. S8; Supplementary Data 1 Tables S6 and S9",
+      "claim": "Source-held-out validation exposes raw source-level variation and baseline shifts.",
+      "manuscript_location": "Main text; Fig. 4; Fig. S8; Tables S6 and S9",
       "public_artifacts_to_inspect": [
         "manuscript_metric_index_public.json",
         "Supplementary Data 1 Tables S6 and S9",
-        "Supporting Information Fig. S8",
-        "figure_source_map_public.json: Fig. 6"
+        "figure_source_map_public.json: Fig. 4 and Fig. S8"
       ],
-      "code_example_check": "The toy schema includes a source/reporting-setting group to show the public field role without including source-derived mapping metadata.",
-      "boundary": "Source-derived identifiers, record counts, and full extraction tables are handled through the manuscript data-access route."
+      "boundary": "Post hoc offset checks quantify shift size and are not prospective performance estimates."
     },
     {
-      "claim_id": "non_public_data_scope",
-      "claim": "Exact metric regeneration requires the non-public observation table.",
-      "manuscript_location": "Data availability; Supplementary Code 1 README; Supplementary Data 1 Table S12",
+      "claim_id": "data_access_scope",
+      "claim": "Public summary artifacts and synthetic code are released, while observation-level verification follows the stated request route.",
+      "manuscript_location": "Data availability; Table S12",
       "public_artifacts_to_inspect": [
         "README.md",
-        "manuscript_metric_index_public.json",
-        "claim_to_artifact_map_public.json",
+        "REPRODUCIBILITY_BOUNDARY.md",
         "Supplementary Data 1 Table S12"
       ],
-      "code_example_check": "The toy output sets scope.exact_metrics_use_non_public_observation_table=true and public_output_boundary.toy_metrics_are_not_manuscript_performance=true.",
-      "boundary": "The public package omits non-public literature-derived rows, internal mapping metadata, full literature-extraction tables, trained models, and row-level prediction files."
+      "boundary": "Publisher-controlled full texts and source-derived extraction materials are not redistributed."
     }
-  ]
+  ],
+  "narrative_profile": "evidence-bounded",
+  "release_status": "preupload candidate"
 }

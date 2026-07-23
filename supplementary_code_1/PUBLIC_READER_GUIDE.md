@@ -15,11 +15,11 @@ python src/public_pipeline_template.py example_data/schema_example.csv --write-c
 - `scope.toy_example_only` is `true`.
 - `scope.exact_metrics_use_non_public_observation_table` is `true`.
 - `public_output_boundary.toy_metrics_are_not_manuscript_performance` is `true`.
-- `public_output_boundary.public_files` lists the five public JSON/CSV files.
+- `public_output_boundary.public_files` lists the public support files.
 - `public_output_boundary.public_curation_table` points to Supplementary Data 1 Table S12.
 - `metric_role.metrics_field` is `toy example metrics only`.
 - `metric_role.manuscript_values_source` is `manuscript_metric_index.reported_metric_values and Supplementary Data 1`.
-- `figure_source_map.figure_count` is 15.
+- `figure_source_map.figure_count` is 13.
 
 3. Read the validation fields:
 
@@ -33,7 +33,7 @@ python src/public_pipeline_template.py example_data/schema_example.csv --write-c
 
 - `manuscript_metric_index_public.json` lists the reported manuscript metrics and their Supplementary Data table locations.
 - The same values are in Supplementary Data 1, especially Tables S4, S6, S8, S11, and S13.
-- For the source-held-out offset check, Supplementary Data 1 Table S6 lists mean-shift R² = 0.871 and affine R² = 0.891 for the main descriptor set; Fig. S8 is the residual/offset summary, and these calibrated values are offset-size estimates rather than prospective performance.
+- For source-held-out transfer, Table S6 reports raw performance and post hoc offset-size checks, while Table S9 and Fig. S8 report aggregate baseline-shift, rank-retention, and exploratory polymer-theme diagnostics.
 - `example_output/public_example_output.json` shows the expected example JSON from the synthetic run, including the same scope and metric-role fields.
 
 5. Use the claim and question files:
@@ -41,7 +41,7 @@ python src/public_pipeline_template.py example_data/schema_example.csv --write-c
 - `public_schema_dictionary.csv` identifies the public role and feature family of each exposed field.
 - `claim_to_artifact_map_public.json` starts from a manuscript claim and lists the public files that inspect it.
 - `reader_question_map_public.json` starts from a common methods or data question and lists the public files, manuscript locations, and interpretation limits that answer it.
-- `figure_source_map_public.json` maps Fig. 1-Fig. 7 and Fig. S1-Fig. S8 to public files.
+- `figure_source_map_public.json` maps Fig. 1-Fig. 5 and Fig. S1-Fig. S8 to public files.
 
 ## What these public files show
 
@@ -77,4 +77,4 @@ Use `reader_question_map_public.json` as the shortest path through eight expecte
 - response_profiles_not_causal
 - supplementary_code_scope
 
-Each entry gives a short answer, public files, and a scope note. Together, they make the data-release choice checkable while keeping the observation-level extraction table on the manuscript data-access route.
+Each entry gives a short answer, public files, and a scope note. Each entry identifies the relevant public files and the limit of the synthetic example.

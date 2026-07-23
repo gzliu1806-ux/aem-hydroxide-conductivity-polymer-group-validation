@@ -14,7 +14,7 @@
         "Data availability statement",
         "Supplementary Data 1 Table S12",
         "README.md",
-        "claim_to_artifact_map_public.json: non_public_data_scope"
+        "claim_to_artifact_map_public.json: data_access_scope"
       ],
       "boundary": "Full extraction tables, source-derived curation materials, and row-level prediction files are handled through the manuscript data-access route."
     },
@@ -53,15 +53,13 @@
     },
     {
       "question_id": "small_aem_descriptor_increment",
-      "question": "Why are AEM descriptors useful when their R² increment is small?",
+      "question": "Why are AEM descriptors useful when their R\u00b2 increment is small?",
       "short_answer": "Generic descriptors provide the main structure-derived gain over reported membrane/test covariates; AEM descriptors mainly translate fitted model behavior into follow-up measurement questions around hydration/transport balance, packing/accessibility, cation placement, and rigidity/flexibility.",
       "inspect": [
-        "Results 3.3 and 3.6",
-        "Fig. 4",
-        "Fig. 7",
-        "Fig. S7",
-        "Supplementary Data 1 Tables S6-S8 and S14",
-        "claim_to_artifact_map_public.json: aem_descriptors_are_interpretive"
+        "Figs. 2 and 3",
+        "Fig. S6",
+        "Supplementary Data 1 Tables S6\u2013S8 and S14",
+        "summary_data/aem_response_profile_coordinates_public.csv"
       ],
       "boundary": "The manuscript does not claim a large accuracy gain or causal morphology measurement from these descriptors."
     },
@@ -70,10 +68,8 @@
       "question": "How are extrapolation risk and source-held-out offsets represented?",
       "short_answer": "Support-distance and source-held-out analyses are treated as risk checks for literature-derived reported-conductivity models.",
       "inspect": [
-        "Fig. 5",
-        "Fig. 6",
-        "Fig. S6",
-        "Fig. S8",
+        "Figs. 4 and 5",
+        "Figs. S7 and S8",
         "Supplementary Data 1 Tables S6, S9, and S13"
       ],
       "boundary": "Post hoc source-offset check is an offset-size analysis; raw held-out predictions remain the prospective estimate."
@@ -83,10 +79,10 @@
       "question": "How should the AEM response profiles be interpreted?",
       "short_answer": "The profiles are fitted-model response checks over sampled descriptor ranges and serve as prompts for follow-up membrane experiments.",
       "inspect": [
-        "Fig. 4 caption",
-        "Fig. S7 caption",
-        "Supporting Information Table S2",
-        "Supplementary Data 1 Table S14"
+        "Fig. 3 caption",
+        "Fig. S6 caption",
+        "Supplementary Data 1 Tables S2 and S14",
+        "summary_data/aem_response_profile_coordinates_public.csv"
       ],
       "boundary": "The public package does not include direct free-volume, morphology, hydrated-channel, or transport-pathway characterization."
     },

@@ -5,15 +5,8 @@
     "toy_script_does_not_generate_these_metrics": true,
     "exact_metric_regeneration_uses_non_public_observation_table": true
   },
-  "target": "log10(reported hydroxide conductivity / mS cm⁻¹)",
+  "target": "log10(reported hydroxide conductivity / mS cm\u207b\u00b9)",
   "reported_metrics": {
-    "polymer_group_full_model": {
-      "feature_set": "BASE + GENERIC + AEM descriptors",
-      "r2": 0.805,
-      "rmse": 0.128,
-      "mae": 0.096,
-      "location": "Manuscript Abstract/Results; Supplementary Data 1 Table S6"
-    },
     "polymer_group_base_generic": {
       "feature_set": "BASE + GENERIC",
       "r2": 0.801,
@@ -35,7 +28,22 @@
       "mean_shift_r2": 0.871,
       "affine_r2": 0.891,
       "role": "post hoc offset-size analysis; raw held-out predictions remain the prospective estimate",
-      "location": "Supplementary Data 1 Table S6 and Fig. S8"
+      "location": "Supplementary Data 1 Table S6"
+    },
+    "polymer_group_complete_descriptor_model": {
+      "feature_set": "BASE + GENERIC + AEM descriptors",
+      "r2": 0.805,
+      "rmse": 0.128,
+      "mae": 0.096,
+      "location": "Manuscript Abstract/Results; Supplementary Data 1 Table S6"
+    },
+    "source_held_out_raw": {
+      "r2": 0.679,
+      "rmse": 0.164,
+      "mae": 0.126,
+      "spearman": 0.821,
+      "negative_raw_r2_fraction": 0.301,
+      "location": "Manuscript; Supplementary Data 1 Tables S6 and S9"
     }
   },
   "metric_table_links": {

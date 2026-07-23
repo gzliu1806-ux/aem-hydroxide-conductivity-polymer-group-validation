@@ -170,9 +170,9 @@ def main() -> None:
         "manuscript metric index must identify values as copied from manuscript tables",
     )
     reported_values = reported_index.get("reported_metric_values", {})
-    require(reported_values.get("polymer_group_full_model", {}).get("r2") == 0.805, "reported full-model R² missing")
-    require(reported_values.get("polymer_group_full_model", {}).get("rmse") == 0.128, "reported full-model RMSE missing")
-    require(reported_values.get("polymer_group_full_model", {}).get("mae") == 0.096, "reported full-model MAE missing")
+    require(reported_values.get("polymer_group_complete_descriptor_model", {}).get("r2") == 0.805, "reported complete-model R² missing")
+    require(reported_values.get("polymer_group_complete_descriptor_model", {}).get("rmse") == 0.128, "reported complete-model RMSE missing")
+    require(reported_values.get("polymer_group_complete_descriptor_model", {}).get("mae") == 0.096, "reported complete-model MAE missing")
     require(reported_values.get("polymer_group_base_generic", {}).get("r2") == 0.801, "reported BASE_GENERIC R² missing")
     require(
         reported_values.get("random_rowwise_controls", {}).get("base_generic_aem_descriptor_set_r2") == 0.941,
@@ -196,16 +196,16 @@ def main() -> None:
     require(output.get("reader_question_map", {}).get("question_count") == 8, "question file should contain 8 entries")
     figure_source_map = output.get("figure_source_map", {})
     require(figure_source_map.get("available") is True, "figure file did not load")
-    require(figure_source_map.get("figure_count") == 15, "figure file should cover all main and supplementary figures")
-    require(figure_source_map.get("main_figure_count") == 7, "figure file should cover seven main figures")
+    require(figure_source_map.get("figure_count") == 13, "figure file should cover five main and eight supplementary figures")
+    require(figure_source_map.get("main_figure_count") == 5, "figure file should cover five main figures")
     require(figure_source_map.get("supplementary_figure_count") == 8, "figure file should cover eight supplementary figures")
     require(
         figure_source_map.get("all_entries_have_journal_upload_artifacts") is True,
         "each figure file entry should route to a journal upload artifact",
     )
     require(
-        figure_source_map.get("journal_upload_artifact_route_count") == 15,
-        "figure file should expose 15 journal upload artifact routes",
+        figure_source_map.get("journal_upload_artifact_route_count") == 13,
+        "figure file should expose 13 journal upload artifact routes",
     )
     require("Fig. 5" in figure_source_map.get("figure_ids", []), "figure file should include Fig. 5")
     require("Fig. S8" in figure_source_map.get("figure_ids", []), "figure file should include Fig. S8")

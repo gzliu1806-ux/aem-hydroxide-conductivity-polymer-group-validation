@@ -10,11 +10,11 @@
       "aem_descriptors_are_interpretive",
       "support_distance_flags_risk",
       "source_held_out_offsets",
-      "non_public_data_scope"
+      "data_access_scope"
     ],
     "path": "claim_to_artifact_map_public.json",
     "scope": {
-      "exact_metric_regeneration_uses_non_public_observation_table": true,
+      "exact_metric_regeneration_uses_observation_level_verification_data": true,
       "no_record_level_targets_or_source_records": true,
       "public_claim_crosswalk_only": true,
       "toy_script_does_not_generate_reported_metrics": true
@@ -69,15 +69,13 @@
   "figure_source_map": {
     "all_entries_have_journal_upload_artifacts": true,
     "available": true,
-    "figure_count": 15,
+    "figure_count": 13,
     "figure_ids": [
       "Fig. 1",
       "Fig. 2",
       "Fig. 3",
       "Fig. 4",
       "Fig. 5",
-      "Fig. 6",
-      "Fig. 7",
       "Fig. S1",
       "Fig. S2",
       "Fig. S3",
@@ -87,20 +85,13 @@
       "Fig. S7",
       "Fig. S8"
     ],
-    "journal_upload_artifact_route_count": 15,
-    "main_figure_count": 7,
+    "journal_upload_artifact_route_count": 13,
+    "main_figure_count": 5,
     "path": "figure_source_map_public.json",
     "scope": {
-      "exact_plotting_data_use_non_public_observation_table": true,
-      "no_record_level_response_data_or_source_records": true,
-      "public_figure_source_map_only": true,
-      "toy_script_does_not_regenerate_figures": true
+      "release": "aggregate and synthetic public materials only"
     },
-    "summary": {
-      "main_figure_count": 7,
-      "purpose": "Maps each figure to public artwork, journal upload artifacts, manuscript/SI locations, Supplementary Data tables, public JSON files, and release-boundary notes.",
-      "supplementary_figure_count": 8
-    },
+    "summary": {},
     "supplementary_figure_count": 8
   },
   "group_leakage": {
@@ -155,25 +146,27 @@
     },
     "path": "manuscript_metric_index_public.json",
     "reported_metric_keys": [
-      "polymer_group_full_model",
       "polymer_group_base_generic",
       "random_rowwise_controls",
       "repeated_polymer_holdout_aem_descriptor_set",
-      "source_held_out_offset_check"
+      "source_held_out_offset_check",
+      "polymer_group_complete_descriptor_model",
+      "source_held_out_raw"
     ],
     "reported_metric_locations": {
       "polymer_group_base_generic": "Manuscript Results; Supplementary Data 1 Table S6",
-      "polymer_group_full_model": "Manuscript Abstract/Results; Supplementary Data 1 Table S6",
+      "polymer_group_complete_descriptor_model": "Manuscript Abstract/Results; Supplementary Data 1 Table S6",
       "random_rowwise_controls": "Supplementary Data 1 Table S11",
       "repeated_polymer_holdout_aem_descriptor_set": "Supplementary Data 1 Table S8",
-      "source_held_out_offset_check": "Supplementary Data 1 Table S6 and Fig. S8"
+      "source_held_out_offset_check": "Supplementary Data 1 Table S6",
+      "source_held_out_raw": "Manuscript; Supplementary Data 1 Tables S6 and S9"
     },
     "reported_metric_values": {
       "polymer_group_base_generic": {
         "feature_set": "BASE + GENERIC",
         "r2": 0.801
       },
-      "polymer_group_full_model": {
+      "polymer_group_complete_descriptor_model": {
         "feature_set": "BASE + GENERIC + AEM descriptors",
         "mae": 0.096,
         "r2": 0.805,
@@ -193,6 +186,13 @@
         "affine_r2": 0.891,
         "mean_shift_r2": 0.871,
         "role": "post hoc offset-size analysis; raw held-out predictions remain the prospective estimate"
+      },
+      "source_held_out_raw": {
+        "mae": 0.126,
+        "negative_raw_r2_fraction": 0.301,
+        "r2": 0.679,
+        "rmse": 0.164,
+        "spearman": 0.821
       }
     },
     "scope": {
@@ -249,7 +249,7 @@
   "primary_split": "grouped_cv",
   "public_output_boundary": {
     "do_not_cite_toy_metrics_as_manuscript_performance": true,
-    "figure_source_map": "figure_source_map_public.json maps Fig. 1-Fig. 7 and Fig. S1-Fig. S8 to public source and upload-artifact routes.",
+    "figure_source_map": "figure_source_map_public.json maps Fig. 1-Fig. 5 and Fig. S1-Fig. S8 to public source and upload-artifact routes.",
     "public_curation_boundary": "Supplementary Data 1 Table S12 records the public-curation protocol and reader-facing curation rationale.",
     "public_example_purpose": "schema, split, leakage-check, row-wise-control, and feature-family code-path inspection",
     "public_route_maps": [

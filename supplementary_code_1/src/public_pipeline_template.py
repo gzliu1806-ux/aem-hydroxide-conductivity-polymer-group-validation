@@ -470,7 +470,7 @@ def evaluate(
                 "reader_question_map_public.json",
                 "figure_source_map_public.json",
             ],
-            "figure_source_map": "figure_source_map_public.json maps Fig. 1-Fig. 7 and Fig. S1-Fig. S8 to public source and upload-artifact routes.",
+            "figure_source_map": "figure_source_map_public.json maps Fig. 1-Fig. 5 and Fig. S1-Fig. S8 to public source and upload-artifact routes.",
             "public_example_purpose": "schema, split, leakage-check, row-wise-control, and feature-family code-path inspection",
         },
         "metric_role": {

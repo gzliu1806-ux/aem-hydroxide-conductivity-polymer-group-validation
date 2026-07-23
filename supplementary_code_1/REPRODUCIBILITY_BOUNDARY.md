@@ -23,7 +23,6 @@ Supplementary Code 1 is a public code release for inspecting the field schema, g
 - Observation-level rows from the curated literature table.
 - Source-derived curation materials and complete source-group identifiers.
 - Full literature-extraction tables, source article files, local reference-manager files, caches, trained models, or row-level prediction files.
-- Direct morphology, free-volume, hydrated-channel, or transport-pathway characterization.
 
 ## Why the release is limited
 
@@ -40,6 +39,6 @@ The non-public observation table is derived from article-level extraction record
 7. Use `figure_source_map_public.json` when starting from a figure.
 8. Use Supplementary Data 1 Tables S4, S6, S8, S11, S12, and S13 for the locked validation, descriptor-family sensitivity, repeated-holdout, row-wise-control, public-curation, and uncertainty and split-size summaries.
 
-The figure-level source guide links figures to public files. Row-level plotting data, trained models, and source records follow the manuscript data-access boundary.
+The figure-level source guide links each figure to its public files and reported summary tables.
 
 Toy metrics printed by the public example are deterministic example outputs. The JSON `metric_role` block labels them as toy-only outputs and points readers to `manuscript_metric_index.reported_metric_values` plus Supplementary Data 1 for manuscript metrics. They have no membrane-performance meaning and are not manuscript evidence.
