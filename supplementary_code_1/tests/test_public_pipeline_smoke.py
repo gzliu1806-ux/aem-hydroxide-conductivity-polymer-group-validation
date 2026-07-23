@@ -192,7 +192,7 @@ def main() -> None:
         "Supplementary Data 1 Table S12" in claim_checks.get("public_curation_boundary", ""),
         "public-curation boundary should route to Supplementary Data 1 Table S12",
     )
-    require(output.get("claim_to_artifact_map", {}).get("claim_count") == 8, "claim file should contain 8 entries")
+    require(output.get("claim_to_artifact_map", {}).get("claim_count") == 9, "claim file should contain 9 entries")
     require(output.get("reader_question_map", {}).get("question_count") == 8, "question file should contain 8 entries")
     figure_source_map = output.get("figure_source_map", {})
     require(figure_source_map.get("available") is True, "figure file did not load")

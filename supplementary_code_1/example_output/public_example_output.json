@@ -1,10 +1,11 @@
 {
   "claim_to_artifact_map": {
     "available": true,
-    "claim_count": 8,
+    "claim_count": 9,
     "claim_ids": [
       "reported_hydroxide_conductivity_target",
       "polymer_group_validation",
+      "fixed_model_family_comparison",
       "rowwise_control_is_optimistic",
       "generic_descriptors_supply_structure_signal",
       "aem_descriptors_are_interpretive",

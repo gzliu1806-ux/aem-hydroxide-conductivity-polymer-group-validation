@@ -29,6 +29,16 @@
       "boundary": "The synthetic grouped split checks the code path; manuscript metrics use the full verification table."
     },
     {
+      "claim_id": "fixed_model_family_comparison",
+      "claim": "Eleven model families were compared on the same outer polymer folds and outer-fold feature matrix, with model-specific scaling or training-only grid search where required.",
+      "manuscript_location": "Main text; Fig. S4; Supplementary Data 1 Tables S5 and S15",
+      "public_artifacts_to_inspect": [
+        "fixed_model_configuration_public.json",
+        "Supplementary Data 1 Tables S5 and S15"
+      ],
+      "boundary": "The configuration file records the fitted workflow; exact metric recomputation requires the observation-level verification table."
+    },
+    {
       "claim_id": "rowwise_control_is_optimistic",
       "claim": "Random row-wise splitting is an optimistic control rather than the primary performance estimate.",
       "manuscript_location": "Abstract; Fig. 1; Table S11",

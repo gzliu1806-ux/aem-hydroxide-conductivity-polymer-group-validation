@@ -23,9 +23,10 @@
       "question": "Can the exact manuscript metrics be regenerated from Supplementary Code 1?",
       "short_answer": "No. Supplementary Code 1 demonstrates the public schema and validation paths; exact CatBoost metric recomputation uses the non-public observation table.",
       "inspect": [
+        "fixed_model_configuration_public.json",
         "manuscript_metric_index_public.json",
-        "Supplementary Data 1 Tables S4, S6, S8, S11, and S13",
-        "public_pipeline_template.py output: public_output_boundary"
+        "Supplementary Data 1 Tables S4, S5, S6, and S15",
+        "REPRODUCIBILITY_BOUNDARY.md"
       ],
       "boundary": "Toy metrics are deterministic run checks and have no membrane-performance meaning."
     },

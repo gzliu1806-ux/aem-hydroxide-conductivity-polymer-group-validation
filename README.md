@@ -2,13 +2,14 @@
 
 This repository accompanies the manuscript *Polymer-group validation of hydroxide-conductivity models for anion exchange membranes: data leakage, descriptor interpretation, and source heterogeneity*.
 
-It provides public summary tables, field definitions, fitted response coordinates, and a synthetic example of polymer-group validation. The example is designed to show the validation interface and data boundaries; it does not regenerate manuscript metrics from the non-public observation-level literature table.
+It provides public summary tables, field definitions, fitted response coordinates, exact fixed-model settings, and a synthetic example of polymer-group validation. The example shows the validation interface and data boundaries; it does not regenerate manuscript metrics from the non-public observation-level literature table.
 
 ## Release contents
 
 - `Supplementary_Data_1.xlsx`: editable Tables S1-S15.
 - `Supplementary_Code_1.zip`: archive of the runnable public example.
 - `supplementary_code_1/`: expanded copy of Supplementary Code 1.
+- `artwork/`: the five main figures and eight supplementary figures as PDF, SVG, and high-resolution PNG files. Submission TIFF exports remain outside the Git repository.
 - `extended_aem_response_atlas/`: 48 fitted AEM response profiles for diagnostic review; this extension is not part of the formal Supporting Information.
 - `PUBLIC_RELEASE_MANIFEST.sha256`: checksums for the files in this release.
 
@@ -19,7 +20,7 @@ cd supplementary_code_1
 python tests/test_public_pipeline_smoke.py
 ```
 
-The smoke test checks a 10-row synthetic dataset containing five polymer groups. The grouped split must report zero polymer overlap. Reported CatBoost metrics are indexed in `supplementary_code_1/manuscript_metric_index_public.json` and tabulated in `Supplementary_Data_1.xlsx`.
+The smoke test checks a 10-row synthetic dataset containing five polymer groups. The grouped split must report zero polymer overlap. Reported CatBoost metrics are indexed in `supplementary_code_1/manuscript_metric_index_public.json` and tabulated in `Supplementary_Data_1.xlsx`; the eleven-model workflow is recorded in `supplementary_code_1/fixed_model_configuration_public.json`.
 
 ## Data boundary
 

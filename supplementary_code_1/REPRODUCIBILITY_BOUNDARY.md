@@ -13,6 +13,7 @@ Supplementary Code 1 is a public code release for inspecting the field schema, g
 - The public schema roles listed in `public_schema_dictionary.csv`.
 - The field-to-feature-set list showing exact feature columns and public-dictionary coverage.
 - The reported summary manuscript metrics indexed in `manuscript_metric_index_public.json`.
+- The exact fixed benchmark settings and training-fold preprocessing contract in `fixed_model_configuration_public.json`.
 - The claim file lists public inspection points for each major manuscript claim in `claim_to_artifact_map_public.json`.
 - The question file links common methods or data questions to public files and manuscript locations in `reader_question_map_public.json`.
 - The figure-level source guide from each main and supplementary figure to artwork files, public tables, map files, and boundary notes in `figure_source_map_public.json`.

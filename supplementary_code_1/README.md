@@ -10,6 +10,7 @@ Supplementary Code 1 demonstrates the public field layout, polymer-group split, 
 - `environment_report_public.json`: package versions used to prepare the public example.
 - `example_data/schema_example.csv`: a 10-row, 5-polymer-group toy dataset with repeated observations per polymer.
 - `summary_data/aem_response_profile_coordinates_public.csv`: aggregate fitted coordinates for the eight displayed AEM response profiles; no observation-level rows are included.
+- `fixed_model_configuration_public.json`: machine-readable outer-fold preprocessing, feature-budget, weighting, hyperparameter-grid, and fixed-model settings for all eleven benchmark families.
 - `public_schema_dictionary.csv`: a machine-readable dictionary of public input fields, derived toy features, feature-family roles, manuscript use, and release-scope notes.
 - `requirements.txt`: version-bounded minimal packages needed to run the public toy example.
 - `LICENSE.md`: license terms for the public code, public summary tables, and synthetic example data.
